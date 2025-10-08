@@ -1,95 +1,112 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPortrait, setIsPortrait] = useState(false);
 
-  const slides = [
-    {
-      backgroundImage: "url('/hero.jpg')",
-      title: "BUILD UP YOUR",
-      subtitle: "BODY SHAPE",
-      description: "Build Your Body and Fitness with Professional Touch"
-    },
-    {
-      backgroundImage: "url('/hero2.jpg')",
-      title: "TRANSFORM YOUR",
-      subtitle: "LIFESTYLE",
-      description: "Achieve Your Fitness Goals with Expert Guidance"
-    }
-  ];
+  useEffect(() => {
+    const checkOrientation = () => {
+      setIsPortrait(window.innerHeight > window.innerWidth);
+    };
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+    // Check on mount
+    checkOrientation();
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    // Listen for resize events
+    window.addEventListener('resize', checkOrientation);
+    window.addEventListener('orientationchange', checkOrientation);
+
+    return () => {
+      window.removeEventListener('resize', checkOrientation);
+      window.removeEventListener('orientationchange', checkOrientation);
+    };
+  }, []);
+
+  const heroContent = {
+    title: "TRANSFORM YOUR",
+    subtitle: "LIFESTYLE",
+    title2: "ACHIEVE YOUR",
+    subtitle2: "GOALS"
   };
 
   return (
-    <section className="relative min-h-screen bg-black text-white overflow-hidden">
-      {/* Background Image */}
+    <div className="relative min-h-screen text-white overflow-hidden">
+      {/* Background with Dark Gradient */}
       <div 
-        className="absolute inset-0 bg-cover sm:bg-cover md:bg-cover lg:bg-cover xl:bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
+        className="absolute inset-0 bg-gradient-to-r from-gray-900 via-black to-black"
+        style={{ minHeight: "100vh" }}
+      />
+      
+      {/* Hero Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: slides[currentSlide].backgroundImage,
-          filter: "brightness(0.6) contrast(1.1)",
-          minHeight: "100vh",
-          width: "100%"
+          backgroundImage: isPortrait 
+            ? "url('/hero2_protrait.jpg')"
+            : "url('/hero2.jpg')",
+          filter: "brightness(0.7) contrast(1.1)",
+          minHeight: "100vh"
         }}
       />
       
-      {/* Red Glow Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-red-900/10 via-red-600/15 to-red-900/10" />
+      {/* Orange Glow Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-orange-900/10 via-orange-800/15 to-orange-900/10" />
       
-      {/* Main Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen text-center px-4 py-20">
-        <div className="max-w-5xl w-full">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-2 sm:mb-4 tracking-[0.2em] text-red-300 transition-all duration-1000 ease-in-out">
-            {slides[currentSlide].title}
-          </h2>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-4 sm:mb-6 tracking-[0.3em] text-white transition-all duration-1000 ease-in-out">
-            {slides[currentSlide].subtitle}
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 text-white font-light max-w-3xl mx-auto leading-relaxed transition-all duration-1000 ease-in-out">
-            {slides[currentSlide].description}
-          </p>
-          <button className="bg-red-600 hover:bg-red-700 text-white px-10 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-bold tracking-wider transition-colors rounded-sm">
-            JOIN US
-          </button>
+      {/* Faded EVERFITNESS Text */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <span className="text-9xl font-black text-white/5 tracking-widest select-none">EVERFITNESS</span>
+      </div>
+      
+      {/* Main Content Container */}
+      <div className="relative z-10 grid grid-cols-1 items-center gap-8 min-h-screen px-6 lg:px-12 max-w-7xl mx-auto pt-24 pb-16">
+        {/* Left Side - Text Content */}
+        <div className="max-w-2xl">
+          <div className="mb-8">
+            <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black tracking-wider mb-2">
+              <span className="block">{heroContent.title}</span>
+              <span className="block text-white">{heroContent.subtitle}</span>
+            </h1>
+            <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black tracking-wider">
+              <span className="block">{heroContent.title2}</span>
+              <span className="block text-white">{heroContent.subtitle2}</span>
+            </h1>
+          </div>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <button 
+              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-bold tracking-wider rounded-lg transition-colors flex items-center justify-center gap-2"
+            >
+              TRY FOR FREE
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <button 
+              className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 text-lg font-bold tracking-wider rounded-lg transition-colors flex items-center justify-center gap-2"
+            >
+              SCHEDULE TIME
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </button>
+          </div>
+          
+          {/* Social Proof */}
+          <div className="flex items-center gap-3">
+            <div className="flex -space-x-2">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div key={i} className="w-8 h-8 rounded-full bg-gray-600 border-2 border-white"></div>
+              ))}
+            </div>
+            <span className="text-white font-medium">10,000+ Active members</span>
+          </div>
         </div>
+        
+        {/* Right side stats removed as requested */}
       </div>
       
-      {/* Slider Navigation Arrows */}
-      <button 
-        onClick={prevSlide}
-        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-colors"
-      >
-        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <button 
-        onClick={nextSlide}
-        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-2 sm:p-3 rounded-full transition-colors"
-      >
-        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
       
-      {/* Slide Indicators */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex space-x-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
-              index === currentSlide ? 'bg-red-600' : 'bg-white/50'
-            }`}
-          />
-        ))}
-      </div>
-    </section>
+      {/* Bottom benefits removed as requested */}
+    </div>
   );
 }

@@ -35,7 +35,10 @@ export function Header() {
         </div>
         
         {/* Desktop Join Us Button */}
-        <button className="hidden sm:block bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold transition-colors">
+        <button className="hidden sm:block text-white px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold transition-colors"
+                style={{backgroundColor: '#FE9900'}}
+                onMouseEnter={(e) => e.target.style.backgroundColor = '#E6850E'}
+                onMouseLeave={(e) => e.target.style.backgroundColor = '#FE9900'}>
           JOIN US
         </button>
 
@@ -56,7 +59,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-sm border-t border-white/10">
+        <div className="lg:hidden absolute top-full left-0 right-0 backdrop-blur-sm border-t border-white/10" style={{backgroundColor: 'rgba(254, 153, 0, 0.9)'}}>
           <div className="px-4 py-6 space-y-4">
             <a href="#" className="block text-white hover:text-red-500 transition-colors font-medium">HOME</a>
             <a href="#" className="block text-white hover:text-red-500 transition-colors font-medium">ABOUT</a>
@@ -65,7 +68,10 @@ export function Header() {
             <a href="#" className="block text-white hover:text-red-500 transition-colors font-medium">PAGES</a>
             <a href="#" className="block text-white hover:text-red-500 transition-colors font-medium">BLOG</a>
             <a href="#" className="block text-white hover:text-red-500 transition-colors font-medium">CONTACT</a>
-            <button className="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 font-semibold transition-colors">
+            <button className="w-full text-white px-6 py-3 font-semibold transition-colors"
+                    style={{backgroundColor: '#FE9900'}}
+                    onMouseEnter={(e) => e.target.style.backgroundColor = '#E6850E'}
+                    onMouseLeave={(e) => e.target.style.backgroundColor = '#FE9900'}>
               JOIN US
             </button>
           </div>
