@@ -1,15 +1,15 @@
 
 const gymImages1 = [
-  "/professional-female-yoga-fitness-instructor.jpg",
-  "/professional-female-yoga-fitness-instructor.jpg",
-  "/professional-female-yoga-fitness-instructor.jpg",
-  "/professional-female-yoga-fitness-instructor.jpg",
+  "/gymgallery1.jpg",
+  "/gymgallery5.jpg",
+  "/gymgallery4.jpg",
+  "/gymgallery2.jpg",
 ];
 
 const gymImages2 = [
-  "/professional-female-yoga-fitness-instructor.jpg",
-  "/professional-female-yoga-fitness-instructor.jpg",
-  "/professional-female-yoga-fitness-instructor.jpg",
+  "/gymgallery3.jpg",
+  "/gymgallery6.jpg",
+  "/gymgallery7.jpg",
   "/professional-female-yoga-fitness-instructor.jpg",
 ];
 
