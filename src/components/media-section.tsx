@@ -7,9 +7,9 @@ const gymImages1 = [
 
 const gymImages2 = [
   { src: "/gymgallery3.jpg", text: "Yoga Studio" },
-  { src: "/gymgallery6.jpg" },
-  { src: "/professional-female-yoga-fitness-instructor.jpg" },
-  { src: "/gymgallery7.jpg", text: "Weightlifting" },
+  { src: "/gymgallery7.jpg" },
+  { src: "/gymgallery8.jpg" },
+  { src: "/gymgallery9.jpg", text: "Weightlifting" },
 ];
 
 export function MediaSection() {
