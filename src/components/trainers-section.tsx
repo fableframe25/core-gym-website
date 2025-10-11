@@ -5,16 +5,38 @@ interface Trainer {
   slot: string;
 }
 
-function TrainerCard({ member, index, total }: { member: Trainer; index: number; total: number }) {
+function TrainerCard({
+  member,
+  index,
+  total,
+}: {
+  member: Trainer;
+  index: number;
+  total: number;
+}) {
   return (
     <div className="relative flex flex-col items-center">
       {/* Name */}
-      <h3 className="text-2xl sm:text-3xl font-black text-orange-500 mb-1 text-center tracking-tight uppercase antialiased" style={{ fontFamily: '"Arial Black", "Helvetica Bold", sans-serif', fontWeight: 900, WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
+      <h3
+        className="text-2xl sm:text-3xl font-black text-orange-500 mb-1 text-center tracking-tight uppercase antialiased"
+        style={{
+          fontFamily: '"Arial Black", "Helvetica Bold", sans-serif',
+          fontWeight: 900,
+          WebkitFontSmoothing: "antialiased",
+          MozOsxFontSmoothing: "grayscale",
+        }}
+      >
         {member.name}
       </h3>
-      
+
       {/* Specialty */}
-      <p className="text-white text-xs font-bold uppercase tracking-wider mb-3 text-center antialiased" style={{ WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
+      <p
+        className="text-white text-xs font-bold uppercase tracking-wider mb-3 text-center antialiased"
+        style={{
+          WebkitFontSmoothing: "antialiased",
+          MozOsxFontSmoothing: "grayscale",
+        }}
+      >
         {member.specialty}
       </p>
 
@@ -24,14 +46,14 @@ function TrainerCard({ member, index, total }: { member: Trainer; index: number;
         <div className="absolute inset-0 rounded-full bg-orange-500 p-[5px]">
           {/* Image Container */}
           <div className="w-full h-full overflow-hidden rounded-full bg-black">
-            <img 
-              src={member.image} 
+            <img
+              src={member.image}
               alt={member.name}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
           </div>
         </div>
-        
+
         {/* Slot Badge - Replaces Experience */}
         <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-1.5 rounded-full text-xs font-black shadow-lg z-10">
           {member.slot}
@@ -41,12 +63,10 @@ function TrainerCard({ member, index, total }: { member: Trainer; index: number;
       {/* Dots Indicator - Only on Mobile */}
       <div className="flex md:hidden justify-center gap-2 mt-2">
         {[...Array(total)].map((_, i) => (
-          <div 
-            key={i} 
+          <div
+            key={i}
             className={`rounded-full transition-all duration-300 ${
-              i === index 
-                ? 'w-2.5 h-2.5 bg-white' 
-                : 'w-2.5 h-2.5 bg-white/30'
+              i === index ? "w-2.5 h-2.5 bg-white" : "w-2.5 h-2.5 bg-white/30"
             }`}
           ></div>
         ))}
@@ -57,55 +77,57 @@ function TrainerCard({ member, index, total }: { member: Trainer; index: number;
 
 export function TrainersSection() {
   const teamMembers: Trainer[] = [
-    
     {
       name: "SABYASACHI",
       specialty: "PERSONAL TRAINER",
       image: "/trainer4.jpg",
-      slot: "Morning"
+      slot: "Morning",
     },
     {
       name: "SUBHO",
       specialty: "GENERAL TRAINER",
       image: "/trainer5.jpg",
-      slot: "Morning"
+      slot: "Morning",
     },
     {
       name: "ARUP",
       specialty: "PERSONAL TRAINER",
       image: "/trainer6.jpg",
-      slot: "Morning"
+      slot: "Morning",
     },
     {
       name: "DEEP",
       specialty: "GENERAL TRAINER",
       image: "/trainer7.jpg",
-      slot: "Morning"
+      slot: "Morning",
     },
     {
       name: "MONIMOY",
       specialty: "PERSONAL TRAINER",
       image: "/trainer1.jpg",
-      slot: "Evening"
+      slot: "Evening",
     },
-    
+
     {
       name: "JYOTI",
       specialty: "GENERAL TRAINER",
       image: "/trainer3.jpg",
-      slot: "Evening"
+      slot: "Evening",
     },
     {
       name: "AJOY",
       specialty: "PERSONAL TRAINER",
       image: "/trainer2.jpg",
-      slot: "Evening"
+      slot: "Evening",
     },
   ];
 
   return (
     <>
-      <section id="trainers" className="py-16 bg-black relative overflow-hidden">
+      <section
+        id="trainers"
+        className="py-16 bg-black relative overflow-hidden"
+      >
         {/* Background Effects */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(251,146,60,0.08)_0%,transparent_50%)]"></div>
@@ -117,27 +139,32 @@ export function TrainersSection() {
           {/* Header */}
           <div className="text-center mb-12">
             <div className="inline-block mb-4">
-              <span 
+              <span
                 className="text-black px-6 py-2 text-xs font-black uppercase tracking-widest"
                 style={{
-                  backgroundColor: '#F97316',
-                  borderRadius: '12px 12px 15px 5px / 10px 10px 15px 8px',
-                  display: 'inline-block',
-                  lineHeight: '1.5',
-                  clipPath: 'polygon(0% 0%, 95% 0%, 100% 30%, 100% 100%, 5% 100%, 0% 70%)'
+                  backgroundColor: "#F97316",
+                  borderRadius: "12px 12px 15px 5px / 10px 10px 15px 8px",
+                  display: "inline-block",
+                  lineHeight: "1.5",
+                  clipPath:
+                    "polygon(0% 0%, 95% 0%, 100% 30%, 100% 100%, 5% 100%, 0% 70%)",
                 }}
               >
-                Aesthetic Gym
+                Trainers
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tight leading-[0.95] uppercase" style={{ fontFamily: 'Impact, "Arial Black", sans-serif', fontWeight: 900, letterSpacing: '0.02em' }}>
-              OUR BEST PROFESSIONAL<br />
-              FITNESS <span className="text-orange-500" style={{ fontWeight: 900 }}>TRAINERS</span>
+            <h2 className="text-4xl font-bold text-center mb-12 tracking-wide text-white">
+              <span className="relative inline-block">
+                <span className="border-b-4 border-orange-500 pb-1">Our</span>
+              </span>{" "}
+              <span>
+                <span className="text-orange-500">T</span>rainers
+              </span>
             </h2>
           </div>
 
           {/* Trainers Grid - Mobile: Horizontal Scroll, Desktop: Custom Layout */}
-          
+
           {/* Mobile View - Horizontal Scroll */}
           <div className="flex overflow-x-auto md:hidden gap-8 max-w-7xl mx-auto pb-4 snap-x snap-mandatory scrollbar-hide px-4">
             {teamMembers.map((member, index) => (
@@ -145,7 +172,11 @@ export function TrainersSection() {
                 key={index}
                 className="group relative flex-shrink-0 w-[85vw] sm:w-[300px] snap-center first:ml-[7.5vw] last:mr-[7.5vw]"
               >
-                <TrainerCard member={member} index={index} total={teamMembers.length} />
+                <TrainerCard
+                  member={member}
+                  index={index}
+                  total={teamMembers.length}
+                />
               </div>
             ))}
           </div>
@@ -156,7 +187,11 @@ export function TrainersSection() {
             <div className="grid grid-cols-4 gap-x-16 lg:gap-x-24 mb-8">
               {teamMembers.slice(0, 4).map((member, index) => (
                 <div key={index} className="group relative flex justify-center">
-                  <TrainerCard member={member} index={index} total={teamMembers.length} />
+                  <TrainerCard
+                    member={member}
+                    index={index}
+                    total={teamMembers.length}
+                  />
                 </div>
               ))}
             </div>
@@ -166,17 +201,29 @@ export function TrainersSection() {
               <div className="grid grid-cols-12 gap-x-8 lg:gap-x-12">
                 {/* Trainer 5 - SUBHO (between 1st and 2nd) */}
                 <div className="col-start-3 col-span-2 group relative flex justify-center">
-                  <TrainerCard member={teamMembers[4]} index={4} total={teamMembers.length} />
+                  <TrainerCard
+                    member={teamMembers[4]}
+                    index={4}
+                    total={teamMembers.length}
+                  />
                 </div>
-                
+
                 {/* Trainer 6 - ARUP (between 2nd and 3rd) */}
                 <div className="col-start-6 col-span-2 group relative flex justify-center">
-                  <TrainerCard member={teamMembers[5]} index={5} total={teamMembers.length} />
+                  <TrainerCard
+                    member={teamMembers[5]}
+                    index={5}
+                    total={teamMembers.length}
+                  />
                 </div>
-                
+
                 {/* Trainer 7 - DEEP (between 3rd and 4th) */}
                 <div className="col-start-9 col-span-2 group relative flex justify-center">
-                  <TrainerCard member={teamMembers[6]} index={6} total={teamMembers.length} />
+                  <TrainerCard
+                    member={teamMembers[6]}
+                    index={6}
+                    total={teamMembers.length}
+                  />
                 </div>
               </div>
             </div>

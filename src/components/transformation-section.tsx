@@ -19,24 +19,34 @@ export function TransformationSection() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const nextStory = () => setCurrentIndex((p) => (p + 1) % transformations.length);
+  const nextStory = () =>
+    setCurrentIndex((p) => (p + 1) % transformations.length);
   const prevStory = () =>
     setCurrentIndex((p) => (p === 0 ? transformations.length - 1 : p - 1));
 
   return (
-    <section id="transformations" className="relative py-20 bg-black text-white overflow-hidden">
+    <section
+      id="transformations"
+      className="relative py-20 bg-black text-white overflow-hidden"
+    >
       {/* Gritty background textures */}
       <div className="absolute inset-0 bg-[url('/grain-texture.png')] opacity-10 mix-blend-overlay"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black opacity-95"></div>
 
       {/* Background motivational words */}
       <div className="absolute inset-0 text-white/5 font-black uppercase tracking-[0.25em] select-none">
-        <div className="absolute top-16 left-6 text-8xl rotate-[-5deg]">NO LIMITS</div>
-        <div className="absolute bottom-24 right-10 text-9xl rotate-[6deg]">GRIND</div>
+        <div className="absolute top-16 left-6 text-8xl rotate-[-5deg]">
+          NO LIMITS
+        </div>
+        <div className="absolute bottom-24 right-10 text-9xl rotate-[6deg]">
+          GRIND
+        </div>
         <div className="absolute top-1/2 left-1/3 -rotate-12 text-[10rem] leading-none">
           FOCUS
         </div>
-        <div className="absolute bottom-10 left-1/4 rotate-[4deg] text-7xl">BEAST</div>
+        <div className="absolute bottom-10 left-1/4 rotate-[4deg] text-7xl">
+          BEAST
+        </div>
       </div>
 
       {/* Right industrial metal element */}
@@ -47,8 +57,9 @@ export function TransformationSection() {
             {[...Array(10)].map((_, i) => (
               <div
                 key={i}
-                className={`w-3 h-5 border-2 border-gray-600 rounded-full shadow-inner ${i % 2 === 0 ? 'rotate-12' : '-rotate-12'
-                  }`}
+                className={`w-3 h-5 border-2 border-gray-600 rounded-full shadow-inner ${
+                  i % 2 === 0 ? "rotate-12" : "-rotate-12"
+                }`}
               ></div>
             ))}
             {/* Small bolt at bottom */}
@@ -57,12 +68,33 @@ export function TransformationSection() {
         </div>
       </div>
 
-
       <div className="relative container mx-auto px-4 z-10">
-        <h2 className="text-3xl md:text-5xl font-black text-center mb-16 tracking-[0.25em]">
-          <span className="text-white">Raw</span>{" "}
-          <span className="text-zinc-400">Transformations</span>
-        </h2>
+        {/* Themed heading with styled label */}
+        <div className="text-center mb-12">
+          <div className="inline-block mb-4">
+            <span
+              className="text-black px-6 py-2 text-xs font-black uppercase tracking-widest"
+              style={{
+                backgroundColor: "#F97316",
+                borderRadius: "12px 12px 15px 5px / 10px 10px 15px 8px",
+                display: "inline-block",
+                lineHeight: "1.5",
+                clipPath:
+                  "polygon(0% 0%, 95% 0%, 100% 30%, 100% 100%, 5% 100%, 0% 70%)",
+              }}
+            >
+              Transformations
+            </span>
+          </div>
+          <h2 className="text-4xl font-bold text-center mb-12 tracking-wide">
+            <span className="relative inline-block">
+              <span className="border-b-4 border-orange-500 pb-1">Our</span>
+            </span>{" "}
+            <span>
+              <span className="text-orange-500">T</span>ransformations
+            </span>
+          </h2>
+        </div>
 
         {/* Desktop layout */}
         <div className="hidden md:flex flex-col gap-24">
@@ -72,12 +104,12 @@ export function TransformationSection() {
               className={`flex flex-col md:flex-row items-center justify-center gap-10`}
             >
               {/* Photos section */}
-              <div className="relative flex items-center -space-x-8 grayscale">
-                <div className="relative rotate-3 overflow-hidden shadow-[0_0_40px_-10px_rgba(255,255,255,0.15)]">
+              <div className="relative flex items-center -space-x-8">
+                <div className="relative rotate-3 overflow-hidden shadow-[0_0_40px_-10px_rgba(255,255,255,0.15)] group">
                   <img
                     src={story.before}
                     alt="Before"
-                    className="w-80 h-[28rem] object-cover brightness-[0.7] contrast-[1.1]"
+                    className="w-80 h-[28rem] object-cover brightness-[0.7] contrast-[1.1] grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-white via-zinc-300 to-transparent"></div>
@@ -86,11 +118,11 @@ export function TransformationSection() {
                   </span>
                 </div>
 
-                <div className="relative rotate-3 overflow-hidden shadow-[0_0_40px_-10px_rgba(255,255,255,0.2)] -translate-y-2">
+                <div className="relative rotate-3 overflow-hidden shadow-[0_0_40px_-10px_rgba(255,255,255,0.2)] -translate-y-2 group">
                   <img
                     src={story.after}
                     alt="After"
-                    className="w-80 h-[28rem] object-cover brightness-[1.1] contrast-[1.3]"
+                    className="w-80 h-[28rem] object-cover brightness-[1.1] contrast-[1.3] grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-white via-zinc-300 to-transparent"></div>
@@ -102,12 +134,31 @@ export function TransformationSection() {
 
               {/* Text content */}
               <div className="md:w-[40%]">
-                <h3 className="text-3xl font-extrabold uppercase mb-3 tracking-[0.15em] text-white">
+                <h3 className="text-3xl font-extrabold uppercase mb-3 tracking-[0.15em] text-orange-500">
                   {story.title}
                 </h3>
-                <div className="h-[3px] w-20 bg-white mb-4"></div>
+                <div className="h-[3px] w-20 bg-orange-500 mb-4"></div>
                 <p className="text-gray-300 text-lg leading-relaxed max-w-md">
-                  {story.description}
+                  {story.description
+                    .split(
+                      /(discipline|confidence|grind|stronger|sweat|built)/gi
+                    )
+                    .map((part, i) =>
+                      [
+                        "discipline",
+                        "confidence",
+                        "grind",
+                        "stronger",
+                        "sweat",
+                        "built",
+                      ].includes(part.trim().toLowerCase()) ? (
+                        <span key={i} className="text-orange-500 font-bold">
+                          {part}
+                        </span>
+                      ) : (
+                        <span key={i}>{part}</span>
+                      )
+                    )}
                 </p>
               </div>
             </div>
