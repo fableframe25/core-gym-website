@@ -2,7 +2,7 @@ import AboutSection from "./components/about-section";
 import { ContactSection } from "./components/contact-section";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
-import { HeroSection } from "./components/hero-section";
+import HeroSection from "./components/hero-section";
 import { MediaSection } from "./components/media-section";
 import { OffersSection } from "./components/offers-section";
 import { TrainersSection } from "./components/trainers-section";
