@@ -175,7 +175,7 @@ export function TransformationSection() {
 
         {/* Mobile layout */}
         <div className="md:hidden flex flex-col items-center gap-8">
-          <div className="flex gap-2 relative grayscale">
+          <div className="flex gap-2 relative">
             <div className="relative rotate-3 overflow-hidden border border-white/10">
               <img
                 src={transformations[currentIndex].before}

@@ -133,7 +133,7 @@ export function Header() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div
-          className="lg:hidden fixed top-20 left-1/2 transform -translate-x-1/2 backdrop-blur-xl border border-white/20 shadow-2xl shadow-orange-500/10 transition-all duration-500 z-[60] rounded-3xl w-fit max-w-sm animate-in slide-in-from-top-2"
+          className="lg:hidden fixed top-20 left-1/2 transform -translate-x-1/2 backdrop-blur-xl border border-white/20 shadow-2xl shadow-orange-500/10 transition-all duration-500 z-[60] rounded-3xl w-[350px] animate-in slide-in-from-top-2"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.95)" }}
         >
           <div className="px-6 py-6 space-y-5 text-center">
