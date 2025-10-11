@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
 
 export function Footer() {
@@ -11,14 +10,14 @@ export function Footer() {
         <div className="flex flex-col items-center space-y-6 pb-6">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white rounded-md flex items-center justify-center">
+            <div>
               <img
                 src="/logo-remover.png"
                 alt="FitGym Logo"
-                className="w-6 h-6 object-contain"
+                className="w-20 h-20 object-contain"
               />
             </div>
-            <span className="text-white text-xl font-semibold">FitGym</span>
+            {/* <span className="text-white text-xl font-semibold">FitGym</span> */}
           </div>
 
           {/* Navigation Links */}
@@ -41,17 +40,17 @@ export function Footer() {
             >
               Trainers
             </a>
+             <a
+              href="#gallery"
+              className="text-white hover:text-orange-500 transition-colors"
+            >
+              Gallery
+            </a>
             <a
               href="#offers"
               className="text-white hover:text-orange-500 transition-colors"
             >
               Pricing
-            </a>
-            <a
-              href="#media"
-              className="text-white hover:text-orange-500 transition-colors"
-            >
-              Gallery
             </a>
             <a
               href="#contact"
@@ -60,13 +59,13 @@ export function Footer() {
               Contact
             </a>
             <a
-              href="#"
+              href="/privacy"
               className="text-white hover:text-orange-500 transition-colors"
             >
               Privacy
             </a>
             <a
-              href="#"
+              href="/terms"
               className="text-white hover:text-orange-500 transition-colors"
             >
               Terms
@@ -81,7 +80,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between pt-6 gap-4">
           {/* Copyright */}
           <div className="text-white text-sm">
-            © FitGym LLC. All rights reserved.
+            © Coregym. All rights reserved.
           </div>
 
           {/* Social Media Icons */}

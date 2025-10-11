@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import AboutSection from "./components/about-section";
 import { ContactSection } from "./components/contact-section";
 import { Footer } from "./components/footer";
@@ -8,9 +9,10 @@ import { OffersSection } from "./components/offers-section";
 import { TrainersSection } from "./components/trainers-section";
 import { TransformationSection } from "./components/transformation-section";
 import { WhatsAppFloat } from "./components/whatsapp-float";
+import { PrivacyPage } from "./components/privacy-page";
+import { TermsPage } from "./components/terms-page";
 
-
-export default function HomePage() {
+function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -26,5 +28,15 @@ export default function HomePage() {
       <Footer />
       <WhatsAppFloat />
     </div>
-  )
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/privacy" element={<PrivacyPage />} />
+      <Route path="/terms" element={<TermsPage />} />
+    </Routes>
+  );
 }

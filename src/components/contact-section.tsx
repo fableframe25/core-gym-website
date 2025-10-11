@@ -13,10 +13,7 @@ export function ContactSection() {
 
   const handleMapClick = () => {
     // Redirect to Google Maps with gym location
-    window.open(
-      "https://maps.google.com/?q=123+Fitness+Street,+Gym+City,+GC+12345",
-      "_blank"
-    );
+    window.open("https://share.google/aq0R4AD80VAJMOZgB", "_blank");
   };
 
   return (
@@ -87,47 +84,15 @@ export function ContactSection() {
             >
               {/* Map Background */}
               <div className="absolute inset-0">
-                {/* Simple Map Pattern */}
-                <div className="absolute inset-0 opacity-20">
-                  <svg viewBox="0 0 400 320" className="w-full h-full">
-                    {/* Simplified world map shapes */}
-                    <path
-                      d="M50 100 Q80 80 110 100 T170 100 Q200 90 230 100 T290 100 Q320 110 350 100 L350 120 Q320 130 290 120 T230 120 Q200 130 170 120 T110 120 Q80 130 50 120 Z"
-                      fill="currentColor"
-                      className="text-gray-600"
-                    />
-                    <path
-                      d="M80 180 Q110 160 140 180 T200 180 Q230 170 260 180 T320 180 Q350 190 380 180 L380 200 Q350 210 320 200 T260 200 Q230 210 200 200 T140 200 Q110 210 80 200 Z"
-                      fill="currentColor"
-                      className="text-gray-600"
-                    />
-                    <path
-                      d="M60 250 Q90 230 120 250 T180 250 Q210 240 240 250 T300 250 Q330 260 360 250 L360 270 Q330 280 300 270 T240 270 Q210 280 180 270 T120 270 Q90 280 60 270 Z"
-                      fill="currentColor"
-                      className="text-gray-600"
-                    />
-                  </svg>
-                </div>
-
-                {/* Location Pin */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="relative">
-                    {/* Pin */}
-                    <div className="w-6 h-6 bg-orange-500 rounded-full shadow-lg animate-pulse"></div>
-                    <div className="w-8 h-8 bg-orange-500/30 rounded-full absolute -inset-1 animate-ping"></div>
-                  </div>
-                </div>
-
-                {/* Location Label */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-16">
-                  <div className="bg-gray-800 rounded-lg px-3 py-2 shadow-lg border border-gray-700">
-                    <p className="text-white text-sm font-medium">
-                      We are here
-                    </p>
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full">
-                      <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
-                    </div>
-                  </div>
+                {/* Map Image */}
+                <div className="absolute inset-0">
+                  <img
+                    src="/map.png"
+                    alt="Gym location map"
+                    className="w-full h-full object-cover hover:grayscale-0 transition-all duration-300"
+                  />
+                  {/* Light overlay for better contrast */}
+                  <div className="absolute inset-0 bg-black/20"></div>
                 </div>
               </div>
 
