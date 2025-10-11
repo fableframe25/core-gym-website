@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -21,7 +20,10 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-black relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-16 px-10 bg-black relative overflow-hidden"
+    >
       {/* Background Effects - Matching other components */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(251,146,60,0.08)_0%,transparent_50%)]"></div>
@@ -47,17 +49,12 @@ export function ContactSection() {
               Contact Us
             </span>
           </div>
-          <h2
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-2 tracking-tight leading-[0.95] uppercase"
-            style={{
-              fontFamily: 'Impact, "Arial Black", sans-serif',
-              fontWeight: 900,
-              letterSpacing: "0.02em",
-            }}
-          >
-            GET IN{" "}
-            <span className="text-orange-500" style={{ fontWeight: 900 }}>
-              TOUCH
+          <h2 className="text-4xl font-bold text-center mb-12 text-white tracking-wide">
+            <span className="relative inline-block">
+              <span className="border-b-4 border-white pb-1">Our</span>
+            </span>{" "}
+            <span>
+              <span className="text-orange-500">C</span>ontact
             </span>
           </h2>
         </div>
@@ -146,7 +143,7 @@ export function ContactSection() {
           </div>
 
           {/* Right Section - Contact Form */}
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700">
+          <div className="bg-gradient-to-br from-gray-8900 to-gray-950 rounded-2xl p-8 border border-gray-700">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name */}
               <div>
