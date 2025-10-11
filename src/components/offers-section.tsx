@@ -28,7 +28,7 @@ export function OffersSection() {
   ];
 
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden">
+    <section id="offers" className="relative min-h-screen bg-black overflow-hidden">
       {/* Faded Background Text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <span className="text-4xl lg:text-6xl xl:text-8xl font-black text-white/5 tracking-widest select-none transform rotate-12">

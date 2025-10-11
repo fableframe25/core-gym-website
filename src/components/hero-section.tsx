@@ -29,7 +29,7 @@ export function HeroSection() {
   };
 
   return (
-    <div className="relative min-h-screen text-white overflow-hidden">
+    <div id="hero" className="relative min-h-screen text-white overflow-hidden">
       {/* Background with Dark Gradient */}
       <div 
         className="absolute inset-0 bg-gradient-to-r from-gray-900 via-black to-black"

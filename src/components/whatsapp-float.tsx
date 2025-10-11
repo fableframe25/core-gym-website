@@ -1,6 +1,6 @@
 export function WhatsAppFloat() {
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
+    <div className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-40">
       {/* Floating Button */}
       <a
         href="#offers"

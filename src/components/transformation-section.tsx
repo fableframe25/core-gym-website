@@ -24,7 +24,7 @@ export function TransformationSection() {
     setCurrentIndex((p) => (p === 0 ? transformations.length - 1 : p - 1));
 
   return (
-    <section className="relative py-20 bg-black text-white overflow-hidden">
+    <section id="transformations" className="relative py-20 bg-black text-white overflow-hidden">
       {/* Gritty background textures */}
       <div className="absolute inset-0 bg-[url('/grain-texture.png')] opacity-10 mix-blend-overlay"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black opacity-95"></div>
