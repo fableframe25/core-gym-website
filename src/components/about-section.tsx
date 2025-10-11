@@ -1,4 +1,39 @@
+import { useRef, useEffect } from 'react';
+
 export default function AboutSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Video is visible - unmute and play
+            video.muted = false;
+            video.play().catch(console.error);
+          } else {
+            // Video is not visible - mute and pause
+            video.muted = true;
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of video is visible
+        rootMargin: '0px 0px -10% 0px' // Start before completely out of view
+      }
+    );
+
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section id="about" className="relative bg-black font-sans px-4 py-16 md:py-24">
       <div className="container mx-auto">
@@ -8,26 +43,25 @@ export default function AboutSection() {
           <div className="relative w-full max-w-lg mx-auto mt-12 lg:mt-0 pb-20 lg:pb-0">
             {/* Main Video */}
             <div className="relative rounded-lg overflow-hidden shadow-2xl">
-              <img 
-                src="/muscular-man-working-out-in-modern-gym-with-weight.jpg"
-                alt="Person with weights overhead" 
+              <video 
+                ref={videoRef}
+                src="/feedback.mp4"
                 className="w-full h-[550px] object-cover rounded-lg"
-              />
-              {/* Play Button Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-all cursor-pointer">
-                  <svg className="w-6 h-6 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-              </div>
+                controls
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
             
             {/* Angled Image 1 - Top Right */}
             <div className="absolute -top-6 right-4 w-44 h-28 overflow-hidden transform rotate-[12deg] shadow-lg border-2 border-white">
               <img 
-                src="/people-working-out-in-gym-group-fitness-class.jpg"
-                alt="Fitness class" 
+                src="/gymgallery5.jpg"
+                alt="Gym gallery" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -35,8 +69,8 @@ export default function AboutSection() {
             {/* Angled Image 2 - Bottom Right */}
             <div className="absolute bottom-4 lg:-bottom-8 right-8 w-40 h-24 overflow-hidden transform rotate-[12deg] shadow-lg border-2 border-white">
               <img 
-                src="/fitness-member-2.jpg"
-                alt="People with dumbbells" 
+                src="/gymgallery8.jpg"
+                alt="Gym gallery" 
                 className="w-full h-full object-cover"
               />
             </div>
