@@ -76,7 +76,7 @@ export default function AboutSection() {
                 playsInline
                 preload="metadata"
               >
-                Your browser does not support the video tag.
+               
               </video>
               
               {/* Custom Play/Pause Button in Center */}
@@ -155,10 +155,10 @@ export default function AboutSection() {
               </div>
               <h2 className="text-4xl font-bold text-left mb-6 tracking-wide">
                 <span className="relative inline-block">
-                  <span className="border-b-4 border-orange-500 pb-1">Our</span>
+                  <span className="border-b-4 border-orange-500 pb-1">About</span>
                 </span>{" "}
                 <span>
-                  <span className="text-orange-500">A</span>bout
+                  <span className="text-orange-500">U</span>s
                 </span>
               </h2>
             </div>

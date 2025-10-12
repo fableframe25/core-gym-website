@@ -62,13 +62,6 @@ export function Header() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
-              href="#offers"
-              className="relative text-white hover:text-orange-500 transition-all duration-300 font-medium text-sm xl:text-base group"
-            >
-              PRICING
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a
               href="#gallery"
               className="relative text-white hover:text-orange-500 transition-all duration-300 font-medium text-sm xl:text-base group"
             >
@@ -150,13 +143,6 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               ABOUT
-            </a>
-            <a
-              href="#offers"
-              className="block text-white hover:text-orange-500 transition-all duration-300 font-medium text-lg hover:translate-x-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              PRICING
             </a>
             <a
               href="#gallery"

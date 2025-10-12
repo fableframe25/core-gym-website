@@ -48,20 +48,20 @@ export function ContactSection() {
           </div>
           <h2 className="text-4xl font-bold text-center mb-12 text-white tracking-wide">
             <span className="relative inline-block">
-              <span className="border-b-4 border-white pb-1">Our</span>
+              <span className="border-b-4 border-white pb-1">Get</span>
             </span>{" "}
             <span>
-              <span className="text-orange-500">C</span>ontact
+              <span className="text-orange-500">In</span> Touch
             </span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Section - Contact Info & Map */}
           <div className="space-y-8">
             {/* Header */}
             <div>
-              <h3 className="text-3xl font-bold text-white mb-6">Contact us</h3>
+              
               <p className="text-gray-400 text-lg leading-relaxed">
                 We are always looking for ways to improve our products and
                 services. Contact us and let us know how we can help you.
@@ -70,11 +70,11 @@ export function ContactSection() {
 
             {/* Contact Details */}
             <div className="flex flex-wrap items-center gap-4 text-white">
-              <span>info@fitgym.com</span>
+              <span>📧 gym.coregym@gmail.com</span>
               <span className="text-gray-600">•</span>
-              <span>+1 (555) 123-4567</span>
+              <span>📞 093300 59709</span>
               <span className="text-gray-600">•</span>
-              <span>support@fitgym.com</span>
+             
             </div>
 
             {/* Clickable Map */}
@@ -117,7 +117,7 @@ export function ContactSection() {
                 </label>
                 <Input
                   type="text"
-                  defaultValue="John Doe"
+                  defaultValue="Your Name"
                   className="w-full p-4 bg-gray-700/50 border-gray-600 text-white rounded-lg focus:border-orange-500 focus:ring-orange-500"
                 />
               </div>
@@ -129,21 +129,14 @@ export function ContactSection() {
                 </label>
                 <Input
                   type="email"
-                  defaultValue="john@example.com"
+                  defaultValue=""
                   className="w-full p-4 bg-gray-700/50 border-gray-600 text-white rounded-lg focus:border-orange-500 focus:ring-orange-500"
                 />
               </div>
 
               {/* Company */}
               <div>
-                <label className="block text-white text-sm font-medium mb-2">
-                  Company
-                </label>
-                <Input
-                  type="text"
-                  defaultValue="FitGym Member"
-                  className="w-full p-4 bg-gray-700/50 border-gray-600 text-white rounded-lg focus:border-orange-500 focus:ring-orange-500"
-                />
+                
               </div>
 
               {/* Message */}

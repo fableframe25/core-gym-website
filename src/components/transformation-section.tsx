@@ -5,9 +5,9 @@ export function TransformationSection() {
     {
       before: "/transform1before.jpg",
       after: "/transform1after.jpg",
-      title: "SHREDDED IN 6 MONTHS",
+      title: "SHREDDED IN 30 DAYS ",
       description:
-        "Dropped 30 pounds. Built discipline. Earned confidence. No gimmicks — just raw grind.",
+        "Dropped 11 KG. Built discipline. Earned confidence. No gimmicks — just raw grind.",
     },
     {
       before: "/gymgallery1.jpg",
@@ -135,7 +135,9 @@ export function TransformationSection() {
               {/* Text content */}
               <div className="md:w-[40%]">
                 <h3 className="text-3xl font-extrabold uppercase mb-3 tracking-[0.15em] text-orange-500">
-                  {story.title}
+                  {story.title.split('30').map((part, i) => (
+                    i === 0 ? part : <><span className="text-white">30</span>{part}</>
+                  ))}
                 </h3>
                 <div className="h-[3px] w-20 bg-orange-500 mb-4"></div>
                 <p className="text-gray-300 text-lg leading-relaxed max-w-md">
@@ -202,8 +204,10 @@ export function TransformationSection() {
           </div>
 
           <div className="text-center mt-2">
-            <h3 className="text-2xl font-bold text-white uppercase mb-2 tracking-[0.1em]">
-              {transformations[currentIndex].title}
+            <h3 className="text-2xl font-bold text-orange-500 uppercase mb-2 tracking-[0.1em]">
+              {transformations[currentIndex].title.split('30').map((part, i) => (
+                i === 0 ? part : <><span className="text-white">30</span>{part}</>
+              ))}
             </h3>
             <p className="text-gray-300 text-base leading-relaxed">
               {transformations[currentIndex].description}

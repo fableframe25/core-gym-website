@@ -47,28 +47,10 @@ export function Footer() {
               Gallery
             </a>
             <a
-              href="#offers"
-              className="text-white hover:text-orange-500 transition-colors"
-            >
-              Pricing
-            </a>
-            <a
               href="#contact"
               className="text-white hover:text-orange-500 transition-colors"
             >
               Contact
-            </a>
-            <a
-              href="/privacy"
-              className="text-white hover:text-orange-500 transition-colors"
-            >
-              Privacy
-            </a>
-            <a
-              href="/terms"
-              className="text-white hover:text-orange-500 transition-colors"
-            >
-              Terms
             </a>
           </nav>
         </div>
@@ -77,12 +59,7 @@ export function Footer() {
         <div className="border-t border-dotted border-gray-600"></div>
 
         {/* Bottom Section - Copyright & Social */}
-        <div className="flex flex-col md:flex-row items-center justify-between pt-6 gap-4">
-          {/* Copyright */}
-          <div className="text-white text-sm">
-            © Coregym. All rights reserved.
-          </div>
-
+        <div className="flex flex-col items-center justify-center pt-6 gap-4">
           {/* Social Media Icons */}
           <div className="flex items-center gap-4">
             <a
@@ -113,6 +90,11 @@ export function Footer() {
             >
               <Youtube className="w-5 h-5" />
             </a>
+          </div>
+          
+          {/* Copyright */}
+          <div className="text-white text-sm">
+            © Coregym. All rights reserved.
           </div>
         </div>
       </div>
