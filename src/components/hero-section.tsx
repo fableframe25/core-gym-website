@@ -2,19 +2,19 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-black overflow-hidden"
+      className="relative h-screen bg-[#1a120e] overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src="/one.jpg"
           alt="Modern gym with person exercising"
-          className="w-full h-full object-cover grayscale"
+          className="w-full h-full object-cover filter sepia saturate-200 hue-rotate-10"
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+  <div className="absolute inset-0 bg-[#1a120e]/50"></div>
 
         {/* Dotted pattern overlay - bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/90 to-transparent"></div>
+  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1a120e]/40 via-[#1a120e]/20 to-transparent"></div>
       </div>
 
       {/* Content Container */}
@@ -50,7 +50,7 @@ const HeroSection = () => {
 
             {/* CTA Button */}
             <div className="mt-12">
-              <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-4 py-2 uppercase tracking-wider transition-all duration-300 transform shadow-lg">
+              <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-4 py-2 uppercase tracking-wider transition-all duration-300 transform shadow-lg rounded-full">
                 START TODAY →
               </button>
             </div>
@@ -58,12 +58,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Bottom decorative dots */}
-      <div className="absolute bottom-20 left-10 flex space-x-2 opacity-60">
-        <div className="w-2 h-2 bg-white rounded-full"></div>
-        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-        <div className="w-2 h-2 bg-white rounded-full"></div>
-      </div>
+      {/* Decorative dots removed per request */}
     </section>
   );
 };

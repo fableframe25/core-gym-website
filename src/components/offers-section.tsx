@@ -27,12 +27,12 @@ const plans = [
     period: "mo",
     features: ["Everything in Premium", "1-on-1 Coaching", "Custom Meal Plans", "24/7 Access", "Locker & Towels"],
     popular: false,
-    gradient: "from-black to-gray-900"
+  gradient: "from-[#1a120e] to-gray-900"
   }
 ];
 
 return (
-  <section id="offers" className="relative min-h-screen bg-black overflow-hidden">
+  <section id="offers" className="relative min-h-screen bg-[#1a120e] overflow-hidden">
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
       <span className="text-4xl lg:text-6xl xl:text-8xl font-black text-white/5 tracking-widest select-none transform rotate-12">
         MEMBERSHIP
@@ -71,7 +71,7 @@ return (
               )}
 
               <div className={`
-                relative bg-black 
+                relative bg-[#1a120e] 
                 rounded-2xl p-6 lg:p-8 h-full
                 border border-gray-700/50
                 shadow-2xl

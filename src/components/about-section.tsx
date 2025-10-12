@@ -59,7 +59,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative bg-black font-sans px-4 py-16 md:py-24"
+      className="relative bg-[#1a120e] font-sans px-4 py-16 md:py-24"
     >
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

@@ -45,7 +45,7 @@ function TrainerCard({
         {/* Orange Border Ring */}
         <div className="absolute inset-0 rounded-full bg-orange-500 p-[5px]">
           {/* Image Container */}
-          <div className="w-full h-full overflow-hidden rounded-full bg-black">
+          <div className="w-full h-full overflow-hidden rounded-full bg-[#1a120e]">
             <img
               src={member.image}
               alt={member.name}
@@ -126,7 +126,7 @@ export function TrainersSection() {
     <>
       <section
         id="trainers"
-        className="py-16 bg-black relative overflow-hidden"
+  className="py-16 bg-[#1a120e] relative overflow-hidden"
       >
         {/* Background Effects */}
         <div className="absolute inset-0">

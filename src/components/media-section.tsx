@@ -14,7 +14,7 @@ const gymImages2 = [
 
 export function MediaSection() {
   return (
-    <div id="gallery" className="bg-black text-white py-16 px-6">
+    <div id="gallery" className="bg-[#1a120e] text-white py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-block mb-4">
@@ -58,7 +58,7 @@ export function MediaSection() {
               />
               {item.text && (
                 <div className="absolute inset-0 flex items-center justify-center opacity-100">
-                  <p className="text-lg w-full font-semibold tracking-wide text-white/80 drop-shadow-md bg-black/40 px-3 py-1 text-center">
+                  <p className="text-lg w-full font-semibold tracking-wide text-white/80 drop-shadow-md bg-[#1a120e]/40 px-3 py-1 text-center">
                     {item.text}
                   </p>
                 </div>
@@ -82,7 +82,7 @@ export function MediaSection() {
                   }`}
               />
               {item.text && (
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-100">
+                <div className="absolute inset-0 bg-[#1a120e]/40 flex items-center justify-center opacity-100">
                   <p className="text-lg font-semibold tracking-wide text-white drop-shadow-md">
                     {item.text}
                   </p>
