@@ -27,7 +27,7 @@ const plans = [
     period: "mo",
     features: ["Everything in Premium", "1-on-1 Coaching", "Custom Meal Plans", "24/7 Access", "Locker & Towels"],
     popular: false,
-    gradient: "from-black to-gray-900"
+  gradient: "from-[#1a120e] to-gray-900"
   }
 ];
 
@@ -71,7 +71,7 @@ return (
               )}
 
               <div className={`
-                relative bg-black 
+                relative bg-[#1a120e] 
                 rounded-2xl p-6 lg:p-8 h-full
                 border border-gray-700/50
                 shadow-2xl

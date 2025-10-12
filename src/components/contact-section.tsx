@@ -92,7 +92,7 @@ export function ContactSection() {
                     className="w-full h-full object-cover hover:grayscale-0 transition-all duration-300"
                   />
                   {/* Light overlay for better contrast */}
-                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="absolute inset-0 bg-[#1a120e]/20"></div>
                 </div>
               </div>
 

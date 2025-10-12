@@ -27,11 +27,11 @@ export function TransformationSection() {
   return (
     <section
       id="transformations"
-      className="relative py-20 bg-[#1a120e] text-white overflow-hidden"
+  className="relative py-20 bg-[#1a120e] text-white overflow-hidden"
     >
       {/* Gritty background textures */}
       <div className="absolute inset-0 bg-[url('/grain-texture.png')] opacity-10 mix-blend-overlay"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#1a120e] via-[#0d0807] to-[#1a120e] opacity-95"></div>
+  <div className="absolute inset-0 bg-gradient-to-b from-[#1a120e] via-[#1a120e]/80 to-[#1a120e] opacity-95"></div>
 
       {/* Background motivational words */}
       <div className="absolute inset-0 text-white/5 font-black uppercase tracking-[0.25em] select-none">
@@ -111,7 +111,7 @@ export function TransformationSection() {
                     alt="Before"
                     className="w-80 h-[28rem] object-cover brightness-[0.7] contrast-[1.1] grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a120e]/70 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-white via-zinc-300 to-transparent"></div>
                   <span className="absolute top-3 left-3 text-[12px] uppercase bg-white/15 backdrop-blur-sm px-3 py-[2px] tracking-widest">
                     Before
@@ -124,7 +124,7 @@ export function TransformationSection() {
                     alt="After"
                     className="w-80 h-[28rem] object-cover brightness-[1.1] contrast-[1.3] grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a120e]/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-white via-zinc-300 to-transparent"></div>
                   <span className="absolute top-3 left-3 text-[12px] uppercase bg-white text-black px-3 py-[2px] tracking-widest">
                     After

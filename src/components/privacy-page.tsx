@@ -6,7 +6,7 @@ import { Footer } from "./footer";
 
 export function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-[#1a120e] text-white">
       <Header />
 
       {/* Background Effects - Matching About section style */}
@@ -16,7 +16,7 @@ export function PrivacyPage() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl"></div>
       </div>
 
-      <section className="relative bg-black font-sans px-4 py-16 md:py-24">
+  <section className="relative bg-[#1a120e] font-sans px-4 py-16 md:py-24">
         <div className="container mx-auto relative z-10">
           {/* Header - Matching About section style */}
           <div className="text-center mb-16">
