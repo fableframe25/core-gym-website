@@ -17,22 +17,36 @@ const HeroSection = () => {
   <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1a120e]/40 via-[#1a120e]/20 to-transparent"></div>
       </div>
 
-        {/* Bottom section - centered vertical layout for mobile */}
-        <div className="absolute bottom-0 left-0 right-0 z-30 pb-8 sm:pb-10 md:pb-12 px-4 sm:px-6 md:px-8">
-          <div className="flex flex-col items-center space-y-6">
-            {/* Social Proof - centered */}
-            <div className="flex flex-col items-center">
-              <div className="flex -space-x-1 mb-2">
-                <img src="/fitness-member-1.jpg" alt="Member" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover" />
-                <img src="/fitness-member-2.jpg" alt="Member" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover" />
-                <img src="/fitness-member-3.jpg" alt="Member" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover" />
-                <img src="/fitness-member-4.jpg" alt="Member" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover" />
-                <img src="/placeholder-user.jpg" alt="Member" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-white object-cover" />
-              </div>
-              <p className="text-white text-xs sm:text-sm md:text-base text-center">
-                <span className="text-orange-500 font-bold text-sm sm:text-base md:text-lg">10,000+</span> Active members
-              </p>
-            </div>
+      {/* Content Container */}
+      <div className="relative z-10 container mx-auto px-4 lg:px-8 h-screen flex items-center">
+        <div className="w-full max-w-4xl">
+          {/* Main Headline */}
+          <div className="text-left">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black mb-8">
+              <span
+                className="block text-white"
+                style={{
+                  fontFamily: '"Great Vibes", cursive',
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                }}
+              >
+                Club
+              </span>
+              <span
+                className="block text-orange-600 font-black"
+                style={{
+                  fontFamily: '"Great Vibes", cursive',
+                  fontWeight: 400,
+                  fontStyle: "normal",
+                }}
+              >
+                The Ultimate
+              </span>
+              <span className="block text-white font-black tracking-wider">
+                TRAINING
+              </span>
+            </h1>
 
             {/* CTA Button */}
             <div className="mt-12">
@@ -42,13 +56,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Desktop Layout (Unchanged) */}
-      <section className="hidden lg:block relative min-h-screen bg-[#1a120e] overflow-hidden flex items-center justify-center">
-        {/* Darker orange gradients on left and right sides with reduced height */}
-        <div className="absolute left-0 top-1/4 w-1/3 h-1/2 bg-gradient-to-r from-orange-900/30 via-orange-800/20 to-transparent blur-2xl"></div>
-        <div className="absolute right-0 top-1/4 w-1/3 h-1/2 bg-gradient-to-l from-orange-900/30 via-orange-800/20 to-transparent blur-2xl"></div>
+      </div>
 
       {/* Decorative dots removed per request */}
     </section>
