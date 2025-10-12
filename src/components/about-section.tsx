@@ -1,11 +1,31 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function AboutSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlayPause = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      video.play();
+      setIsPlaying(true);
+    } else {
+      video.pause();
+      setIsPlaying(false);
+    }
+  };
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+
+    video.addEventListener('play', handlePlay);
+    video.addEventListener('pause', handlePause);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -31,6 +51,8 @@ export default function AboutSection() {
 
     return () => {
       observer.disconnect();
+      video.removeEventListener('play', handlePlay);
+      video.removeEventListener('pause', handlePause);
     };
   }, []);
 
@@ -44,12 +66,11 @@ export default function AboutSection() {
           {/* Left Side - Image Collage */}
           <div className="relative w-full max-w-lg mx-auto mt-12 lg:mt-0 pb-20 lg:pb-0">
             {/* Main Video */}
-            <div className="relative rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative rounded-lg overflow-hidden shadow-2xl group">
               <video
                 ref={videoRef}
                 src="/feedback.mp4"
                 className="w-full h-[550px] object-cover rounded-lg"
-                controls
                 muted
                 loop
                 playsInline
@@ -57,6 +78,29 @@ export default function AboutSection() {
               >
                 Your browser does not support the video tag.
               </video>
+              
+              {/* Custom Play/Pause Button in Center */}
+              <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                <button 
+                  className={`bg-orange-500/80 hover:bg-orange-600/90 text-white rounded-full p-6 transition-all duration-300 transform hover:scale-110 shadow-2xl pointer-events-auto ${isPlaying ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    togglePlayPause();
+                  }}
+                >
+                  {isPlaying ? (
+                    // Pause Icon
+                    <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                    </svg>
+                  ) : (
+                    // Play Icon
+                    <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  )}
+                </button>
+              </div>
             </div>
 
             {/* Angled Image 1 - Top Right */}
@@ -80,11 +124,11 @@ export default function AboutSection() {
             {/* Experience Overlay */}
             <div className="absolute bottom-2 lg:-bottom-4 -left-4 bg-orange-500 rounded-lg px-5 py-3 shadow-2xl">
               <div className="flex items-center gap-3">
-                <span className="text-3xl font-extrabold text-white">25+</span>
+                <span className="text-3xl font-extrabold text-white">HAPPY CLIENT</span>
                 <span className="text-white text-xs font-bold leading-tight">
-                  YEARS OF FITNESS
+                 
                   <br />
-                  EXPERIENCE
+                  
                 </span>
               </div>
             </div>
@@ -213,7 +257,7 @@ export default function AboutSection() {
             </div>
 
             {/* Call to Action Button */}
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl flex items-center gap-2 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            {/* <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl flex items-center gap-2 transition-all duration-300 transform hover:scale-105 shadow-lg">
               MORE ABOUT US
               <svg
                 className="w-5 h-5"
@@ -228,7 +272,7 @@ export default function AboutSection() {
                   d="M13 7l5 5m0 0l-5 5m5-5H6"
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
