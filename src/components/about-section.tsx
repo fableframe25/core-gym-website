@@ -164,21 +164,19 @@ export default function AboutSection() {
             </div>
 
             {/* Main Heading */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight uppercase">
-              DEDICATED TO
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight uppercase">
+              THE BEST GYM IN
               <br />
-              IGNITING YOUR
-              <br />
-              <span className="bg-gradient-to-b from-orange-400 to-orange-600 bg-clip-text text-transparent text-5xl md:text-6xl lg:text-7xl drop-shadow-lg">
-                FITNESS HEALTH
+              <span className="bg-gradient-to-b from-orange-400 to-orange-600 bg-clip-text text-transparent text-4xl md:text-5xl lg:text-6xl drop-shadow-lg">
+                NORTH 24 PARGANAS
               </span>
             </h2>
 
             {/* Description */}
             <p className="text-gray-400 text-base md:text-lg mb-8 leading-relaxed">
-              Quam elementum nullam quas duis, natus tempus, sunt habitant sunt
-              beatae! Aptent enim dolorem aliquet saepe aliquam donec.
-              Dignissimos voluptatum officiis dolorem.
+              First international standard gym with 4,500 sq ft of premium fitness space. 
+              Equipped with over 2,500 kgs of free weights, modern dumbbells, Olympic gear, 
+              and top global brand machines for strength training and cardio.
             </p>
 
             {/* Features Grid */}
@@ -198,7 +196,7 @@ export default function AboutSection() {
                   </svg>
                 </div>
                 <span className="text-white font-semibold">
-                  MODERN FACILITIES
+                  FULLY AIR-CONDITIONED
                 </span>
               </div>
 
@@ -216,7 +214,7 @@ export default function AboutSection() {
                     />
                   </svg>
                 </div>
-                <span className="text-white font-semibold">EXPERT TEAM</span>
+                <span className="text-white font-semibold">TOP GLOBAL BRANDS</span>
               </div>
 
               <div className="flex items-center gap-3">
@@ -234,7 +232,7 @@ export default function AboutSection() {
                   </svg>
                 </div>
                 <span className="text-white font-semibold">
-                  DIVERSE OFFERING
+                  INDOOR RUNNING TRACK
                 </span>
               </div>
 
@@ -252,7 +250,41 @@ export default function AboutSection() {
                     />
                   </svg>
                 </div>
-                <span className="text-white font-semibold">FITNESS FOCUS</span>
+                <span className="text-white font-semibold">ZUMBA & FUNCTIONAL ROOM</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center shrink-0">
+                  <svg
+                    className="w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span className="text-white font-semibold">SEPARATE MEN & WOMEN AREAS</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center shrink-0">
+                  <svg
+                    className="w-4 h-4 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <span className="text-white font-semibold">CLEAN WASHROOMS & SHOWERS</span>
               </div>
             </div>
 
