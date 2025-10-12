@@ -22,7 +22,7 @@ export function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
           isScrolled
-            ? "bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-orange-500/5"
+            ? "bg-[#1a120e]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-orange-500/5"
             : "bg-transparent"
         }`}
       >

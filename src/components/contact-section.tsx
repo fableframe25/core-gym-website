@@ -19,7 +19,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-16 px-10 bg-black relative overflow-hidden"
+      className="py-16 px-10 bg-[#1a120e] relative overflow-hidden"
     >
       {/* Background Effects - Matching other components */}
       <div className="absolute inset-0">

@@ -27,11 +27,11 @@ export function TransformationSection() {
   return (
     <section
       id="transformations"
-      className="relative py-20 bg-black text-white overflow-hidden"
+      className="relative py-20 bg-[#1a120e] text-white overflow-hidden"
     >
       {/* Gritty background textures */}
       <div className="absolute inset-0 bg-[url('/grain-texture.png')] opacity-10 mix-blend-overlay"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black opacity-95"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1a120e] via-[#0d0807] to-[#1a120e] opacity-95"></div>
 
       {/* Background motivational words */}
       <div className="absolute inset-0 text-white/5 font-black uppercase tracking-[0.25em] select-none">

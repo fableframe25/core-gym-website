@@ -126,7 +126,7 @@ export function TrainersSection() {
     <>
       <section
         id="trainers"
-        className="py-16 bg-black relative overflow-hidden"
+        className="py-16 bg-[#1a120e] relative overflow-hidden"
       >
         {/* Background Effects */}
         <div className="absolute inset-0">

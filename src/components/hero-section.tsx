@@ -2,7 +2,7 @@ const HeroSection = () => {
   return (
     <>
       {/* Mobile Layout (Updated) */}
-      <section className="lg:hidden relative min-h-screen bg-black overflow-hidden flex items-center justify-center">
+      <section className="lg:hidden relative min-h-screen bg-[#1a120e] overflow-hidden flex items-center justify-center">
         {/* Darker orange gradients on left and right sides */}
         <div className="absolute left-0 top-1/4 w-1/3 h-1/2 bg-gradient-to-r from-orange-900/30 via-orange-800/20 to-transparent blur-2xl"></div>
         <div className="absolute right-0 top-1/4 w-1/3 h-1/2 bg-gradient-to-l from-orange-900/30 via-orange-800/20 to-transparent blur-2xl"></div>
@@ -58,7 +58,7 @@ const HeroSection = () => {
       </section>
 
       {/* Desktop Layout (Unchanged) */}
-      <section className="hidden lg:block relative min-h-screen bg-black overflow-hidden flex items-center justify-center">
+      <section className="hidden lg:block relative min-h-screen bg-[#1a120e] overflow-hidden flex items-center justify-center">
         {/* Darker orange gradients on left and right sides with reduced height */}
         <div className="absolute left-0 top-1/4 w-1/3 h-1/2 bg-gradient-to-r from-orange-900/30 via-orange-800/20 to-transparent blur-2xl"></div>
         <div className="absolute right-0 top-1/4 w-1/3 h-1/2 bg-gradient-to-l from-orange-900/30 via-orange-800/20 to-transparent blur-2xl"></div>
@@ -88,17 +88,17 @@ const HeroSection = () => {
           </h1>
         </div>
 
-        {/* Left side - Social Proof */}
-        <div className="absolute left-40 xl:left-80 bottom-32 z-10">
+        {/* Left side - Social Proof positioned below text */}
+        <div className="absolute left-[120px] xl:left-[200px] 2xl:left-[280px] top-[420px] xl:top-[520px] 2xl:top-[600px] z-10">
           <div className="flex -space-x-1 mb-2">
-            <img src="/fitness-member-1.jpg" alt="Member" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
-            <img src="/fitness-member-2.jpg" alt="Member" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
-            <img src="/fitness-member-3.jpg" alt="Member" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
-            <img src="/fitness-member-4.jpg" alt="Member" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
-            <img src="/placeholder-user.jpg" alt="Member" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
+            <img src="/fitness-member-1.jpg" alt="Member" className="w-10 h-10 xl:w-12 xl:h-12 rounded-full border-2 border-white object-cover" />
+            <img src="/fitness-member-2.jpg" alt="Member" className="w-10 h-10 xl:w-12 xl:h-12 rounded-full border-2 border-white object-cover" />
+            <img src="/fitness-member-3.jpg" alt="Member" className="w-10 h-10 xl:w-12 xl:h-12 rounded-full border-2 border-white object-cover" />
+            <img src="/fitness-member-4.jpg" alt="Member" className="w-10 h-10 xl:w-12 xl:h-12 rounded-full border-2 border-white object-cover" />
+            <img src="/placeholder-user.jpg" alt="Member" className="w-10 h-10 xl:w-12 xl:h-12 rounded-full border-2 border-white object-cover" />
           </div>
-          <p className="text-white text-base">
-            <span className="text-orange-500 font-bold text-lg">10,000+</span> Active members
+          <p className="text-white text-sm xl:text-base">
+            <span className="text-orange-500 font-bold text-base xl:text-lg">10,000+</span> Active members
           </p>
         </div>
 
