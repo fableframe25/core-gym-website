@@ -34,10 +34,10 @@ export function MediaSection() {
           </div>
           <h2 className="text-4xl font-bold text-center mb-12 tracking-wide">
             <span className="relative inline-block">
-              <span className="border-b-4 border-orange-500 pb-1">Our</span>
+              <span className="border-b-4 border-orange-500 pb-1">Tour</span>
             </span>{" "}
             <span>
-              <span className="text-orange-500">G</span>allery
+              <span className="text-orange-500">The</span> Floor
             </span>
           </h2>
         </div>
