@@ -57,108 +57,93 @@ export function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left Section - Contact Info & Map */}
-          <div className="space-y-8">
+          {/* Left Section - Contact Info */}
+          <div className="flex flex-col items-center justify-center space-y-12 text-center">
             {/* Header */}
-            <div>
-              
-              <p className="text-gray-400 text-lg leading-relaxed">
-                We are always looking for ways to improve our products and
-                services. Contact us and let us know how we can help you.
+            <div className="max-w-md">
+              <p className="text-xl leading-relaxed">
+                <span className="text-white font-light">
+                  We are always looking for ways to{" "}
+                </span>
+                <span className="text-orange-500 font-medium">
+                  improve our products
+                </span>
+                <span className="text-white font-light"> and </span>
+                <span className="text-orange-500 font-medium">services</span>
+                <span className="text-white font-light">. </span>
+                <span className="text-orange-500 font-semibold">
+                  Contact us
+                </span>
+                <span className="text-white font-light">
+                  {" "}
+                  and let us know how we can{" "}
+                </span>
+                <span className="text-orange-500 font-semibold">help you</span>
+                <span className="text-white font-light">.</span>
               </p>
             </div>
 
             {/* Contact Details */}
-            <div className="flex flex-wrap items-center gap-4 text-white">
-              <span>📧 gym.coregym@gmail.com</span>
-              <span className="text-gray-600">•</span>
-              <span>📞 093300 59709</span>
-              <span className="text-gray-600">•</span>
-             
-            </div>
-
-            {/* Clickable Map */}
-            <div
-              className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl h-80 cursor-pointer overflow-hidden group border border-gray-700"
-              onClick={handleMapClick}
-            >
-              {/* Map Background */}
-              <div className="absolute inset-0">
-                {/* Map Image */}
-                <div className="absolute inset-0">
-                  <img
-                    src="/map.png"
-                    alt="Gym location map"
-                    className="w-full h-full object-cover hover:grayscale-0 transition-all duration-300"
-                  />
-                  {/* Light overlay for better contrast */}
-                  <div className="absolute inset-0 bg-[#1a120e]/20"></div>
+            <div className="flex flex-col lg:flex-col items-center gap-4 lg:gap-6 w-full max-w-md">
+              {/* Email */}
+              <a
+                href="mailto:gym.coregym@gmail.com"
+                className="group flex items-center gap-4 bg-gradient-to-r from-orange-500/10 to-transparent p-4 lg:p-5 rounded-xl w-full border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:scale-105"
+              >
+                <div className="flex-shrink-0 w-12 h-12 lg:w-14 lg:h-14 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                  <span className="text-2xl lg:text-3xl">📧</span>
                 </div>
-              </div>
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-                  <p className="text-white text-sm font-medium">
-                    Click to view on Google Maps
-                  </p>
+                <div className="text-left flex-1">
+                  <span className="text-white text-sm lg:text-lg font-medium group-hover:text-orange-500 transition-colors">
+                    gym.coregym@gmail.com
+                  </span>
                 </div>
-              </div>
+              </a>
+
+              {/* Phone */}
+              <a
+                href="tel:09330059709"
+                className="group flex items-center gap-4 bg-gradient-to-r from-orange-500/10 to-transparent p-4 lg:p-5 rounded-xl w-full border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:scale-105"
+              >
+                <div className="flex-shrink-0 w-12 h-12 lg:w-14 lg:h-14 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                  <span className="text-2xl lg:text-3xl">📞</span>
+                </div>
+                <div className="text-left flex-1">
+                  <span className="text-white text-base lg:text-lg font-medium group-hover:text-orange-500 transition-colors">
+                    093300 59709
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
 
-          {/* Right Section - Contact Form */}
-          <div className="bg-gradient-to-br from-gray-8900 to-gray-950 rounded-2xl p-8 border border-gray-700">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Full Name */}
-              <div>
-                <label className="block text-white text-sm font-medium mb-2">
-                  Full name
-                </label>
-                <Input
-                  type="text"
-                  defaultValue="Your Name"
-                  className="w-full p-4 bg-gray-700/50 border-gray-600 text-white rounded-lg focus:border-orange-500 focus:ring-orange-500"
+          {/* Right Section - Map */}
+          <div
+            className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl h-96 cursor-pointer overflow-hidden group border border-gray-700"
+            onClick={handleMapClick}
+          >
+            {/* Map Background */}
+            <div className="absolute inset-0">
+              {/* Map Image */}
+              <div className="absolute inset-0">
+                <img
+                  src="/map.png"
+                  alt="Gym location map"
+                  className="w-full h-full object-cover hover:grayscale-0 transition-all duration-300"
                 />
+                {/* Light overlay for better contrast */}
+                <div className="absolute inset-0 bg-[#1a120e]/20"></div>
               </div>
+            </div>
 
-              {/* Email Address */}
-              <div>
-                <label className="block text-white text-sm font-medium mb-2">
-                  Email Address
-                </label>
-                <Input
-                  type="email"
-                  defaultValue=""
-                  className="w-full p-4 bg-gray-700/50 border-gray-600 text-white rounded-lg focus:border-orange-500 focus:ring-orange-500"
-                />
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
+                <p className="text-white text-sm font-medium">
+                  Click to view on Google Maps
+                </p>
               </div>
-
-              {/* Company */}
-              <div>
-                
-              </div>
-
-              {/* Message */}
-              <div>
-                <label className="block text-white text-sm font-medium mb-2">
-                  Message
-                </label>
-                <Textarea
-                  placeholder="Type your message here"
-                  rows={5}
-                  className="w-full p-4 bg-gray-700/50 border-gray-600 text-white rounded-lg focus:border-orange-500 focus:ring-orange-500 resize-none"
-                />
-              </div>
-
-              {/* Submit Button */}
-              <Button
-                type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase tracking-wide py-4 rounded-lg transition-colors"
-              >
-                Submit
-              </Button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
