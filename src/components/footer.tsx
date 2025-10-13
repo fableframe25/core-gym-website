@@ -4,7 +4,7 @@ import { Instagram, Facebook, Youtube, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
-  <footer className="bg-[#1a120e]">
+    <footer className="bg-[#1a120e]">
       <div className="container mx-auto px-4 py-8">
         {/* Top Section - Logo & Navigation */}
         <div className="flex flex-col items-center space-y-6 pb-6">
@@ -40,7 +40,7 @@ export function Footer() {
             >
               Trainers
             </a>
-             <a
+            <a
               href="#gallery"
               className="text-white hover:text-orange-500 transition-colors"
             >
@@ -77,9 +77,11 @@ export function Footer() {
               <Facebook className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/thecoregym_official?igsh=MWtiNTBkaGJzdDVvNA=="
               className="text-white hover:text-orange-500 transition-colors"
               aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Instagram className="w-5 h-5" />
             </a>
@@ -91,7 +93,7 @@ export function Footer() {
               <Youtube className="w-5 h-5" />
             </a>
           </div>
-          
+
           {/* Copyright */}
           <div className="text-white text-sm">
             © Coregym. All rights reserved.

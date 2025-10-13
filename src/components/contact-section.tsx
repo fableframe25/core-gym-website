@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 export function ContactSection() {
   const handleMapClick = () => {
     // Redirect to Google Maps with gym location
