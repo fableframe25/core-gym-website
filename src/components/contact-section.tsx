@@ -1,16 +1,8 @@
 "use client";
 
 import React from "react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
 
 export function ContactSection() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-  };
-
   const handleMapClick = () => {
     // Redirect to Google Maps with gym location
     window.open("https://share.google/aq0R4AD80VAJMOZgB", "_blank");
