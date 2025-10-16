@@ -7,7 +7,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/one.jpg"
+          src="/new_gym.jpg"
           alt="Modern gym with person exercising"
           className="w-full h-full object-cover filter sepia saturate-200 hue-rotate-10"
         />
