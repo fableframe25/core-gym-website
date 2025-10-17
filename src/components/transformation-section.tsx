@@ -29,8 +29,7 @@ export function TransformationSection() {
       id="transformations"
   className="relative py-20 bg-[#1a120e] text-white overflow-hidden"
     >
-      {/* Gritty background textures */}
-      <div className="absolute inset-0 bg-[url('/grain-texture.png')] opacity-10 mix-blend-overlay"></div>
+      {/* Background gradient */}
   <div className="absolute inset-0 bg-gradient-to-b from-[#1a120e] via-[#1a120e]/80 to-[#1a120e] opacity-95"></div>
 
       {/* Background motivational words */}
