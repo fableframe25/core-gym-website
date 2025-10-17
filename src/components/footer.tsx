@@ -62,15 +62,8 @@ export function Footer() {
         <div className="flex flex-col items-center justify-center pt-6 gap-4">
           {/* Social Media Icons */}
           <div className="flex items-center gap-4">
-            <a
-              href="#"
-              className="text-white hover:text-orange-500 transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
+                        <a
+              href="https://www.facebook.com/share/1DKmphegHB/"
               className="text-white hover:text-orange-500 transition-colors"
               aria-label="Facebook"
             >
@@ -86,7 +79,7 @@ export function Footer() {
               <Instagram className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://youtube.com/@coregymkolkata?si=8ZPHec5SfWtXsFXi"
               className="text-white hover:text-orange-500 transition-colors"
               aria-label="YouTube"
             >

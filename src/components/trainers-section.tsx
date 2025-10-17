@@ -107,6 +107,12 @@ export function TrainersSection() {
       image: "/trainer1.jpg",
       slot: "Evening",
     },
+     {
+      name: "AJOY",
+      specialty: "PERSONAL TRAINER",
+      image: "/trainer2.jpg",
+      slot: "Evening",
+    },
 
     {
       name: "JYOTI",
@@ -114,12 +120,7 @@ export function TrainersSection() {
       image: "/trainer3.jpg",
       slot: "Evening",
     },
-    {
-      name: "AJOY",
-      specialty: "PERSONAL TRAINER",
-      image: "/trainer2.jpg",
-      slot: "Evening",
-    },
+   
   ];
 
   return (

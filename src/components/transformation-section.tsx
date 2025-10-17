@@ -10,9 +10,9 @@ export function TransformationSection() {
         "Dropped 11 KG. Built discipline. Earned confidence. No gimmicks — just raw grind.",
     },
     {
-      before: "/gymgallery1.jpg",
-      after: "/gymgallery2.jpg",
-      title: "MUSCLE GAIN JOURNEY",
+      before: "/trans3.jpg",
+      after: "/trans4.jpg",
+      title: "FITNESS JOURNEY",
       description:
         "Grew stronger every day. Fueled by sweat, not shortcuts. Built to last.",
     },
@@ -109,7 +109,9 @@ export function TransformationSection() {
                   <img
                     src={story.before}
                     alt="Before"
-                    className="w-80 h-[28rem] object-cover brightness-[0.7] contrast-[1.1] grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className={`w-80 h-[28rem] brightness-[0.7] contrast-[1.1] grayscale group-hover:grayscale-0 transition-all duration-500 ${
+                      story.before === "/trans3.jpg" ? "object-cover object-[center_20%]" : "object-cover"
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a120e]/70 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-white via-zinc-300 to-transparent"></div>
@@ -182,7 +184,9 @@ export function TransformationSection() {
               <img
                 src={transformations[currentIndex].before}
                 alt="Before"
-                className="w-36 h-52 object-cover brightness-[0.7]"
+                className={`w-36 h-52 brightness-[0.7] ${
+                  transformations[currentIndex].before === "/trans3.jpg" ? "object-cover object-[center_20%]" : "object-cover"
+                }`}
               />
               <div className="absolute bottom-0 left-0 w-full h-[5px] bg-gradient-to-r from-white via-zinc-300 to-transparent"></div>
               <span className="absolute top-2 left-2 bg-white/15 text-white text-[10px] uppercase px-2 py-[1px]">

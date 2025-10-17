@@ -6,7 +6,7 @@ const gymImages1 = [
 ];
 
 const gymImages2 = [
-  { src: "/gymgallery3.jpg", text: "Yoga Studio" },
+  { src: "/gymgallery3.jpg", text: "Floor Cardio" },
   { src: "/gymgallery7.jpg" },
   { src: "/gymgallery8.jpg" },
   { src: "/gymgallery9.jpg", text: "Weight Lifting" },

@@ -31,7 +31,7 @@ const HeroSection = () => {
                   fontStyle: "normal",
                 }}
               >
-                Club
+                Fitness
               </span>
               <span
                 className="block text-orange-600 font-bold"
@@ -41,10 +41,10 @@ const HeroSection = () => {
                   fontStyle: "normal",
                 }}
               >
-                The Ultimate
+                Thats Fit 
               </span>
               <span className="block text-white font-black tracking-wider">
-                TRAINING
+                Your Life
               </span>
             </h1>
 
