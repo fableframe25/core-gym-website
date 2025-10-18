@@ -1,12 +1,12 @@
 const gymImages1 = [
   { src: "/gymgallery1.jpg" },
-  { src: "/gymgallery5.jpg", text: "Cardio Zone" },
+  { src: "/gymgallery5.jpg", text: "Cardio Floor" },
   { src: "/gymgallery4.jpg", text: "Personal Training" },
   { src: "/gymgallery2.jpg" },
 ];
 
 const gymImages2 = [
-  { src: "/gymgallery3.jpg", text: "Floor Cardio" },
+  { src: "/gymgallery3.jpg", text: "Training Zone" },
   { src: "/gymgallery7.jpg" },
   { src: "/gymgallery8.jpg" },
   { src: "/gymgallery9.jpg", text: "Weight Lifting" },

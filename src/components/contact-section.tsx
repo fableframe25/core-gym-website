@@ -23,10 +23,10 @@ export function ContactSection() {
         <div className="text-center mb-12">
           <div className="inline-block mb-4">
             <span
-              className="text-black px-6 py-2 text-xs font-black uppercase tracking-widest"
+              className="text-black px-8 py-3 text-sm md:text-base font-black uppercase tracking-widest shadow-lg"
               style={{
                 backgroundColor: "#F97316",
-                borderRadius: "12px 12px 15px 5px / 10px 10px 15px 8px",
+                borderRadius: "16px 16px 20px 8px / 14px 14px 20px 12px",
                 display: "inline-block",
                 lineHeight: "1.5",
                 clipPath:
@@ -36,7 +36,7 @@ export function ContactSection() {
               Contact Us
             </span>
           </div>
-          <h2 className="text-4xl font-bold text-center mb-12 text-white tracking-wide">
+          <h2 className="font-extrabold text-center mb-10 text-white tracking-wide text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
             <span className="relative inline-block">
               <span className="border-b-4 border-white pb-1">Get</span>
             </span>{" "}
@@ -50,7 +50,7 @@ export function ContactSection() {
           {/* Left Section - Contact Info */}
           <div className="flex flex-col items-center justify-center space-y-12 text-center">
             {/* Header */}
-            <div className="max-w-md">
+            <div className="max-w-md mb-2">
               <p className="text-xl leading-relaxed">
                 <span className="text-white font-light">
                   We are always looking for ways to{" "}
@@ -74,29 +74,51 @@ export function ContactSection() {
             </div>
 
             {/* Contact Details */}
-            <div className="flex flex-col lg:flex-col items-center gap-4 lg:gap-6 w-full max-w-md">
+            <div className="flex flex-col lg:flex-col items-center gap-4 lg:gap-4 w-full max-w-md">
               {/* Email */}
-              <a
-                href="mailto:gym.coregym@gmail.com"
-                className="group flex items-center gap-4 bg-gradient-to-r from-orange-500/10 to-transparent p-4 lg:p-5 rounded-xl w-full border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:scale-105"
-              >
-                <div className="flex-shrink-0 w-12 h-12 lg:w-14 lg:h-14 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                  <span className="text-2xl lg:text-3xl">📧</span>
+              
+                {/* Email Box with Multiple Emails */}
+                <div className="group bg-gradient-to-br from-[#2d1a12] via-[#1a120e] to-orange-500/10 p-4 sm:p-5 rounded-2xl w-full max-w-sm sm:max-w-xs md:max-w-sm border border-orange-500/20 shadow-lg hover:border-orange-500/40 transition-all duration-300 flex flex-col items-start">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="flex-shrink-0 w-10 h-10 bg-orange-500/30 rounded-xl flex items-center justify-center group-hover:bg-orange-500/40 transition-colors shadow-md">
+                      <span className="text-xl sm:text-2xl">📧</span>
+                    </div>
+                    <span className="text-white text-base sm:text-lg font-bold tracking-wide">Email Us</span>
+                  </div>
+                  <div className="flex flex-col gap-3 w-full">
+                    
+                    <a
+                      href="mailto:gym.coregym@gmail.com"
+                      className="block px-4 py-2 rounded-xl bg-[#22140f]/70 text-white text-sm sm:text-base md:text-lg font-light font-sans transition-all duration-200 text-left shadow border border-orange-500/10 hover:border-orange-500/30 hover:text-orange-500 hover:scale-105 focus:outline-none"
+                      style={{ fontFamily: 'Lato, Raleway, Montserrat, Poppins, Open Sans, Source Sans Pro, sans-serif' }}
+                    >
+                      gym.coregym@gmail.com
+                    </a>
+                    <a
+                      href="mailto:paulamiseal@coregym.net"
+                      className="block px-4 py-2 rounded-xl bg-[#22140f]/70 text-white text-sm sm:text-base md:text-lg font-light font-sans transition-all duration-200 text-left shadow border border-orange-500/10 hover:border-orange-500/30 hover:text-orange-500 hover:scale-105 focus:outline-none"
+                      style={{ fontFamily: 'Lato, Raleway, Montserrat, Poppins, Open Sans, Source Sans Pro, sans-serif' }}
+                    >
+                      paulamiseal@coregym.net
+                    </a>
+                    <a
+                      href="mailto:bhattacharyatuhin@coregym.net"
+                      className="block px-4 py-2 rounded-xl bg-[#22140f]/70 text-white text-sm sm:text-base md:text-lg font-light font-sans transition-all duration-200 text-left shadow border border-orange-500/10 hover:border-orange-500/30 hover:text-orange-500 hover:scale-105 focus:outline-none"
+                      style={{ fontFamily: 'Lato, Raleway, Montserrat, Poppins, Open Sans, Source Sans Pro, sans-serif' }}
+                    >
+                      bhattacharyatuhin@coregym.net
+                    </a>
+                   
+                  </div>
                 </div>
-                <div className="text-left flex-1">
-                  <span className="text-white text-sm lg:text-lg font-medium group-hover:text-orange-500 transition-colors">
-                    gym.coregym@gmail.com
-                  </span>
-                </div>
-              </a>
 
               {/* Phone */}
               <a
                 href="tel:09330059709"
-                className="group flex items-center gap-4 bg-gradient-to-r from-orange-500/10 to-transparent p-4 lg:p-5 rounded-xl w-full border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:scale-105"
+                className="group flex items-center gap-3 bg-gradient-to-r from-orange-500/10 to-transparent p-3 lg:p-4 rounded-xl w-full max-w-sm border border-orange-500/20 shadow-md hover:border-orange-500/40 transition-all duration-300 cursor-pointer hover:scale-105"
               >
-                <div className="flex-shrink-0 w-12 h-12 lg:w-14 lg:h-14 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                  <span className="text-2xl lg:text-3xl">📞</span>
+                <div className="flex-shrink-0 w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                  <span className="text-xl lg:text-2xl">📞</span>
                 </div>
                 <div className="text-left flex-1">
                   <span className="text-white text-base lg:text-lg font-medium group-hover:text-orange-500 transition-colors">

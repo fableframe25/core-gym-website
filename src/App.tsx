@@ -5,12 +5,9 @@ import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import HeroSection from "./components/hero-section";
 import { MediaSection } from "./components/media-section";
-import { OffersSection } from "./components/offers-section";
 import { TrainersSection } from "./components/trainers-section";
 import { TransformationSection } from "./components/transformation-section";
 import { WhatsAppFloat } from "./components/whatsapp-float";
-import { PrivacyPage } from "./components/privacy-page";
-import { TermsPage } from "./components/terms-page";
 
 function HomePage() {
   return (
@@ -21,7 +18,7 @@ function HomePage() {
         <AboutSection />
         <TransformationSection />
         <TrainersSection />
-        <OffersSection />
+        {/* <OffersSection /> removed */}
         <MediaSection />
         <ContactSection />
       </main>
@@ -35,8 +32,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/privacy" element={<PrivacyPage />} />
-      <Route path="/terms" element={<TermsPage />} />
+      {/* PrivacyPage and TermsPage routes removed */}
     </Routes>
   );
 }

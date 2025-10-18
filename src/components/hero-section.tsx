@@ -41,7 +41,7 @@ const HeroSection = () => {
                   fontStyle: "normal",
                 }}
               >
-                Thats Fit 
+                That Fits 
               </span>
               <span className="block text-white font-black tracking-wider">
                 Your Life
@@ -50,9 +50,7 @@ const HeroSection = () => {
 
             {/* CTA Button */}
             <div className="mt-12">
-              <button className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-4 py-2 uppercase tracking-wider transition-all duration-300 transform shadow-lg rounded-full">
-                START TODAY →
-              </button>
+              
             </div>
           </div>
         </div>

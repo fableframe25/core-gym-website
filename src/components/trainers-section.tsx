@@ -85,7 +85,7 @@ export function TrainersSection() {
     },
     {
       name: "SUBHO",
-      specialty: "GENERAL TRAINER",
+      specialty: "PERSONAL TRAINER",
       image: "/trainer5.jpg",
       slot: "Morning",
     },
