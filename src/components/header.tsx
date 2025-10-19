@@ -33,15 +33,15 @@ export function Header() {
               <img
                 src="/logo-remover.png"
                 alt="CoreGym Logo"
-                className="w-8 h-8 lg:w-10 lg:h-10 object-contain transition-transform duration-300 group-hover:scale-105"
+                className="w-10 h-10 lg:w-12 lg:h-12 object-contain transition-transform duration-200 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-orange-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-orange-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
             </div>
-            <div className="ml-3 hidden sm:block">
+            <div className="ml-2 block">
               <h1 className="text-base lg:text-lg font-bold text-white tracking-tight">
                 Core<span className="text-orange-500">Gym</span>
               </h1>
-              <div className="h-0.5 bg-gradient-to-r from-orange-500 to-transparent w-0 group-hover:w-full transition-all duration-500"></div>
+              <div className="h-0.5 bg-gradient-to-r from-orange-500 to-transparent w-0 group-hover:w-full transition-all duration-300"></div>
             </div>
           </div>
 
