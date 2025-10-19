@@ -27,10 +27,10 @@ export function TransformationSection() {
   return (
     <section
       id="transformations"
-  className="relative py-20 bg-[#1a120e] text-white overflow-hidden"
+      className="relative py-20 bg-[#2a1a0c] text-white overflow-hidden"
     >
       {/* Background gradient */}
-  <div className="absolute inset-0 bg-gradient-to-b from-[#1a120e] via-[#1a120e]/80 to-[#1a120e] opacity-95"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#2a1a0c] via-[#2a1a0c]/80 to-[#2a1a0c] opacity-95"></div>
 
       {/* Background motivational words */}
       <div className="absolute inset-0 text-white/5 font-black uppercase tracking-[0.25em] select-none">
@@ -108,11 +108,13 @@ export function TransformationSection() {
                   <img
                     src={story.before}
                     alt="Before"
-                    className={`w-80 h-[28rem] brightness-[0.7] contrast-[1.1] grayscale group-hover:grayscale-0 transition-all duration-500 ${
-                      story.before === "/trans3.jpg" ? "object-cover object-[center_20%]" : "object-cover"
+                    className={`w-80 h-[28rem] transition-all duration-500 ${
+                      story.before === "/trans3.jpg"
+                        ? "object-cover object-[center_20%]"
+                        : "object-cover"
                     }`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a120e]/70 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2a1a0c]/70 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-white via-zinc-300 to-transparent"></div>
                   <span className="absolute top-3 left-3 text-[12px] uppercase bg-white/15 backdrop-blur-sm px-3 py-[2px] tracking-widest">
                     Before
@@ -123,9 +125,9 @@ export function TransformationSection() {
                   <img
                     src={story.after}
                     alt="After"
-                    className="w-80 h-[28rem] object-cover brightness-[1.1] contrast-[1.3] grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-80 h-[28rem] object-cover transition-all duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a120e]/60 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#2a1a0c]/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 w-full h-[6px] bg-gradient-to-r from-white via-zinc-300 to-transparent"></div>
                   <span className="absolute top-3 left-3 text-[12px] uppercase bg-white text-black px-3 py-[2px] tracking-widest">
                     After
@@ -136,16 +138,21 @@ export function TransformationSection() {
               {/* Text content */}
               <div className="md:w-[40%]">
                 <h3 className="text-3xl font-extrabold uppercase mb-3 tracking-[0.15em] text-orange-500">
-                  {story.title.split('30').map((part, i) => (
-                    i === 0 ? part : <><span className="text-white">30</span>{part}</>
-                  ))}
+                  {story.title.split("30").map((part, i) =>
+                    i === 0 ? (
+                      part
+                    ) : (
+                      <>
+                        <span className="text-white">30</span>
+                        {part}
+                      </>
+                    )
+                  )}
                 </h3>
                 <div className="h-[3px] w-20 bg-orange-500 mb-4"></div>
                 <p className="text-gray-300 text-lg leading-relaxed max-w-md">
                   {story.description
-                    .split(
-                      /(discipline|confidence|grind|stronger|sweat|built)/gi
-                    )
+                    .split(/(discipline|confidence|grind|stronger|sweat|built)/gi)
                     .map((part, i) =>
                       [
                         "discipline",
@@ -183,8 +190,10 @@ export function TransformationSection() {
               <img
                 src={transformations[currentIndex].before}
                 alt="Before"
-                className={`w-36 h-52 brightness-[0.7] ${
-                  transformations[currentIndex].before === "/trans3.jpg" ? "object-cover object-[center_20%]" : "object-cover"
+                className={`w-36 h-52 ${
+                  transformations[currentIndex].before === "/trans3.jpg"
+                    ? "object-cover object-[center_20%]"
+                    : "object-cover"
                 }`}
               />
               <div className="absolute bottom-0 left-0 w-full h-[5px] bg-gradient-to-r from-white via-zinc-300 to-transparent"></div>
@@ -197,7 +206,7 @@ export function TransformationSection() {
               <img
                 src={transformations[currentIndex].after}
                 alt="After"
-                className="w-36 h-52 object-cover brightness-[1.1] contrast-[1.3]"
+                className="w-36 h-52 object-cover"
               />
               <div className="absolute bottom-0 left-0 w-full h-[5px] bg-gradient-to-r from-white via-zinc-300 to-transparent"></div>
               <span className="absolute top-2 left-2 bg-white text-black text-[10px] uppercase px-2 py-[1px]">
@@ -208,9 +217,16 @@ export function TransformationSection() {
 
           <div className="text-center mt-2">
             <h3 className="text-2xl font-bold text-orange-500 uppercase mb-2 tracking-[0.1em]">
-              {transformations[currentIndex].title.split('30').map((part, i) => (
-                i === 0 ? part : <><span className="text-white">30</span>{part}</>
-              ))}
+              {transformations[currentIndex].title.split("30").map((part, i) =>
+                i === 0 ? (
+                  part
+                ) : (
+                  <>
+                    <span className="text-white">30</span>
+                    {part}
+                  </>
+                )
+              )}
             </h3>
             <p className="text-gray-300 text-base leading-relaxed">
               {transformations[currentIndex].description}

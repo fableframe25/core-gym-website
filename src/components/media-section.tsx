@@ -14,7 +14,7 @@ const gymImages2 = [
 
 export function MediaSection() {
   return (
-    <div id="gallery" className="bg-[#1a120e] text-white py-16 px-6">
+    <div id="gallery" className="bg-[#2a1a0c] text-white py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <div className="inline-block mb-4">

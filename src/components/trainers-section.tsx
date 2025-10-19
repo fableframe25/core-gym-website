@@ -45,7 +45,7 @@ function TrainerCard({
         {/* Orange Border Ring */}
         <div className="absolute inset-0 rounded-full bg-orange-500 p-[5px]">
           {/* Image Container */}
-          <div className="w-full h-full overflow-hidden rounded-full bg-[#1a120e]">
+          <div className="w-full h-full overflow-hidden rounded-full bg-[#2a1a0c]">
             <img
               src={member.image}
               alt={member.name}
@@ -107,7 +107,7 @@ export function TrainersSection() {
       image: "/trainer1.jpg",
       slot: "Evening",
     },
-     {
+    {
       name: "AJOY",
       specialty: "PERSONAL TRAINER",
       image: "/trainer2.jpg",
@@ -120,14 +120,13 @@ export function TrainersSection() {
       image: "/trainer3.jpg",
       slot: "Evening",
     },
-   
   ];
 
   return (
     <>
       <section
         id="trainers"
-  className="py-16 bg-[#1a120e] relative overflow-hidden"
+        className="py-16 bg-[#2a1a0c] relative overflow-hidden"
       >
         {/* Background Effects */}
         <div className="absolute inset-0">
@@ -156,7 +155,9 @@ export function TrainersSection() {
             </div>
             <h2 className="text-4xl font-bold text-center mb-12 tracking-wide text-white">
               <span className="relative inline-block">
-                <span className="border-b-4 border-orange-500 pb-1">Train</span>
+                <span className="border-b-4 border-orange-500 pb-1">
+                  Train
+                </span>
               </span>{" "}
               <span>
                 <span className="text-orange-500">With</span> Us

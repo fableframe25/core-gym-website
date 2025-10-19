@@ -1,3 +1,6 @@
+body {
+  background: orange !important;
+}
 @import "tailwindcss";
 
 /* Premium fonts applied globally */
@@ -26,7 +29,7 @@ body {
 }
 
 :root {
-  --background: 0 0% 100%;
+  --background: 24 100% 50%; /* Bright orange */
   --foreground: 222.2 84% 4.9%;
   --card: 0 0% 100%;
   --card-foreground: 222.2 84% 4.9%;
@@ -75,7 +78,7 @@ body {
 }
 
 body {
-  background-color: hsl(var(--background));
+  background-color: orange;
   color: hsl(var(--foreground));
   font-family: system-ui, sans-serif;
   margin: 0;

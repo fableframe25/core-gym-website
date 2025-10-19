@@ -9,7 +9,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-16 px-10 bg-[#1a120e] relative overflow-hidden"
+      className="py-16 px-10 bg-[#2a1a0c] relative overflow-hidden"
     >
       {/* Background Effects - Matching other components */}
       <div className="absolute inset-0">
@@ -68,49 +68,58 @@ export function ContactSection() {
                   {" "}
                   and let us know how we can{" "}
                 </span>
-                <span className="text-orange-500 font-semibold">help you</span>
+                <span className="text-orange-500 font-semibold">
+                  help you
+                </span>
                 <span className="text-white font-light">.</span>
               </p>
             </div>
 
             {/* Contact Details */}
             <div className="flex flex-col lg:flex-col items-center gap-4 lg:gap-4 w-full max-w-md">
-              {/* Email */}
-              
-                {/* Email Box with Multiple Emails */}
-                <div className="group bg-gradient-to-br from-[#2d1a12] via-[#1a120e] to-orange-500/10 p-4 sm:p-5 rounded-2xl w-full max-w-sm sm:max-w-xs md:max-w-sm border border-orange-500/20 shadow-lg hover:border-orange-500/40 transition-all duration-300 flex flex-col items-start">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="flex-shrink-0 w-10 h-10 bg-orange-500/30 rounded-xl flex items-center justify-center group-hover:bg-orange-500/40 transition-colors shadow-md">
-                      <span className="text-xl sm:text-2xl">📧</span>
-                    </div>
-                    <span className="text-white text-base sm:text-lg font-bold tracking-wide">Email Us</span>
+              {/* Email Box with Multiple Emails */}
+              <div className="group bg-gradient-to-br from-[#2d1a12] via-[#1a120e] to-orange-500/10 p-4 sm:p-5 rounded-2xl w-full max-w-sm sm:max-w-xs md:max-w-sm border border-orange-500/20 shadow-lg hover:border-orange-500/40 transition-all duration-300 flex flex-col items-start">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="flex-shrink-0 w-10 h-10 bg-orange-500/30 rounded-xl flex items-center justify-center group-hover:bg-orange-500/40 transition-colors shadow-md">
+                    <span className="text-xl sm:text-2xl">📧</span>
                   </div>
-                  <div className="flex flex-col gap-3 w-full">
-                    
-                    <a
-                      href="mailto:gym.coregym@gmail.com"
-                      className="block px-4 py-2 rounded-xl bg-[#22140f]/70 text-white text-sm sm:text-base md:text-lg font-light font-sans transition-all duration-200 text-left shadow border border-orange-500/10 hover:border-orange-500/30 hover:text-orange-500 hover:scale-105 focus:outline-none"
-                      style={{ fontFamily: 'Lato, Raleway, Montserrat, Poppins, Open Sans, Source Sans Pro, sans-serif' }}
-                    >
-                      gym.coregym@gmail.com
-                    </a>
-                    <a
-                      href="mailto:paulamiseal@coregym.net"
-                      className="block px-4 py-2 rounded-xl bg-[#22140f]/70 text-white text-sm sm:text-base md:text-lg font-light font-sans transition-all duration-200 text-left shadow border border-orange-500/10 hover:border-orange-500/30 hover:text-orange-500 hover:scale-105 focus:outline-none"
-                      style={{ fontFamily: 'Lato, Raleway, Montserrat, Poppins, Open Sans, Source Sans Pro, sans-serif' }}
-                    >
-                      paulamiseal@coregym.net
-                    </a>
-                    <a
-                      href="mailto:bhattacharyatuhin@coregym.net"
-                      className="block px-4 py-2 rounded-xl bg-[#22140f]/70 text-white text-sm sm:text-base md:text-lg font-light font-sans transition-all duration-200 text-left shadow border border-orange-500/10 hover:border-orange-500/30 hover:text-orange-500 hover:scale-105 focus:outline-none"
-                      style={{ fontFamily: 'Lato, Raleway, Montserrat, Poppins, Open Sans, Source Sans Pro, sans-serif' }}
-                    >
-                      bhattacharyatuhin@coregym.net
-                    </a>
-                   
-                  </div>
+                  <span className="text-white text-base sm:text-lg font-bold tracking-wide">
+                    Email Us
+                  </span>
                 </div>
+                <div className="flex flex-col gap-3 w-full">
+                  <a
+                    href="mailto:gym.coregym@gmail.com"
+                    className="block px-4 py-2 rounded-xl bg-[#22140f]/70 text-white text-sm sm:text-base md:text-lg font-light font-sans transition-all duration-200 text-left shadow border border-orange-500/10 hover:border-orange-500/30 hover:text-orange-500 hover:scale-105 focus:outline-none"
+                    style={{
+                      fontFamily:
+                        "Lato, Raleway, Montserrat, Poppins, Open Sans, Source Sans Pro, sans-serif",
+                    }}
+                  >
+                    gym.coregym@gmail.com
+                  </a>
+                  <a
+                    href="mailto:paulamiseal@coregym.net"
+                    className="block px-4 py-2 rounded-xl bg-[#22140f]/70 text-white text-sm sm:text-base md:text-lg font-light font-sans transition-all duration-200 text-left shadow border border-orange-500/10 hover:border-orange-500/30 hover:text-orange-500 hover:scale-105 focus:outline-none"
+                    style={{
+                      fontFamily:
+                        "Lato, Raleway, Montserrat, Poppins, Open Sans, Source Sans Pro, sans-serif",
+                    }}
+                  >
+                    paulamiseal@coregym.net
+                  </a>
+                  <a
+                    href="mailto:bhattacharyatuhin@coregym.net"
+                    className="block px-4 py-2 rounded-xl bg-[#22140f]/70 text-white text-sm sm:text-base md:text-lg font-light font-sans transition-all duration-200 text-left shadow border border-orange-500/10 hover:border-orange-500/30 hover:text-orange-500 hover:scale-105 focus:outline-none"
+                    style={{
+                      fontFamily:
+                        "Lato, Raleway, Montserrat, Poppins, Open Sans, Source Sans Pro, sans-serif",
+                    }}
+                  >
+                    bhattacharyatuhin@coregym.net
+                  </a>
+                </div>
+              </div>
 
               {/* Phone */}
               <a

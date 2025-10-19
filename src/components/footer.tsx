@@ -4,7 +4,7 @@ import { Instagram, Facebook, Youtube } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-[#1a120e]">
+    <footer className="bg-[#2a1a0c]">
       <div className="container mx-auto px-4 py-8">
         {/* Top Section - Logo & Navigation */}
         <div className="flex flex-col items-center space-y-6 pb-6">
@@ -62,7 +62,7 @@ export function Footer() {
         <div className="flex flex-col items-center justify-center pt-6 gap-4">
           {/* Social Media Icons */}
           <div className="flex items-center gap-4">
-                        <a
+            <a
               href="https://www.facebook.com/share/1DKmphegHB/"
               className="text-white hover:text-orange-500 transition-colors"
               aria-label="Facebook"
